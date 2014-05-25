@@ -1,30 +1,35 @@
 ## Put comments here that give an overall description of what your
-## functions do
+## functions do:  I followed exactly what was done for the mean function. changing the varable
 
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
-        print (x)
-        print (m)
+        
+        ## print (x)
+        ## print (m)
+        ## this functions do print the given x matrix and m as null
         set <- function(y) {
                 
                 x<<- y
                 
                 
                 m <<- NULL
-                print (m)
+                ## print (m)
+                ##This is not printed
         }
         
         get <- function() x
+        
+        ## This was weird expression because usually we have funtion (x){...} but it appears if x is defined previously then function () x ( by typing get()) gives you x
         setinvematrix<- function(solve) m <<- solve
-        print (setinvematrix)
+        ## print (setinvematrix)
         getinvematrix <- function() m
-        print (getinvematrix())
+        ## print (getinvematrix())
         list(set = set, get = get,
              setinvematrix = setinvematrix,
              getinvematrix = getinvematrix)
-        print (list())
+        ## print (list())
 }
 
 ## Write a short comment describing this function
